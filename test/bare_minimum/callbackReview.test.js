@@ -24,13 +24,6 @@ describe('Callback review', function() {
       });
     });
 
-    it('should invoke the callback with the first line as the second argument', function(done) {
-      pluckFirstLineFromFile(__dirname + '/../files/file_to_read.txt', function(err, firstLine) {
-        expect(firstLine).to.equal('This is a file to read');
-        expect(err).to.not.exist;
-        done();
-      });
-    });
 
   });
 

@@ -22,14 +22,7 @@ describe('Promise constructor', function() {
         .catch(done);
     });
 
-    it('should make the first line of a file available in the `then` block', function(done) {
-      pluckFirstLineFromFileAsync(__dirname + '/../files/file_to_read.txt')
-        .then(function(firstLine) {
-          expect(firstLine).to.equal('This is a file to read');
-          done();
-        })
-        .catch(done);
-    });
+
 
     it('should make any errors available in the `catch` block', function(done) {
       pluckFirstLineFromFileAsync(__dirname + '/../files/nonexistent_file.txt')
