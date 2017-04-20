@@ -20,8 +20,6 @@ var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
   return pluckFirstLineFromFileAsync(readFilePath)
     .then(getGitHubProfileAsync)
     .then(function(profile) {
-      //console.log(profile.id);
-      console.log('------------------------');
       return writeFileAsync(writeFilePath, JSON.stringify(profile));
     });
 };
